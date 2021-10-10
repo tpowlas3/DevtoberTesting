@@ -1,0 +1,11 @@
+# load package
+library(wordcloud)
+
+# get words
+words <- devtoberfest$Words
+
+# get frequency
+frequency <- devtoberfest$Counts
+
+# generate word cloud
+wordcloud(words, frequency, scale = c(3, 1), rot.per=0.2, colors=brewer.pal(8, "Dark2"))
